@@ -1,0 +1,158 @@
+/* =========================================
+   GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+    --bg-color: #050505;
+    --text-main: #d1d1d1;
+    --text-dim: #888;
+    --neon-white: #fff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* =========================================
+   TYPOGRAPHY & LINKS
+   ========================================= */
+h1 {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--neon-white);
+    /* Standard Flicker for Home/About */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+    animation: flicker 2s infinite;
+}
+
+p {
+    max-width: 80vw;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--text-dim);
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: var(--text-dim);
+    text-decoration: underline;
+}
+
+/* =========================================
+   ANIMATIONS (SCANLINE & FLICKER)
+   ========================================= */
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.1;
+    position: fixed; /* Fixed so it moves with scroll */
+    top: -100px;
+    animation: scanline 8s linear infinite;
+    pointer-events: none; /* Lets you click through it */
+}
+
+@keyframes scanline {
+    0% { top: -100px; }
+    100% { top: 100%; }
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+    }
+    20%, 24%, 55% {
+        opacity: 0.3;
+        text-shadow: none;
+    }
+}
+
+/* =========================================
+   PROJECT GRID (About Page)
+   ========================================= */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 900px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+/* Specific link styling for cards to remove underlines */
+.project-grid a {
+    text-decoration: none;
+    display: block;
+    margin: 0;
+}
+
+.project-card {
+    border: 1px solid #222;
+    padding: 20px;
+    transition: all 0.3s;
+    cursor: crosshair;
+}
+
+.project-card:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.label {
+    font-size: 0.6rem;
+    color: #444;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.placeholder {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* =========================================
+   404 ERROR PAGE SPECIFICS
+   ========================================= */
+.glitch-container h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    animation: error-flicker 0.5s infinite alternate;
+}
+
+.glitch-container a {
+    border: 1px solid #333;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.glitch-container a:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+}
+
+@keyframes error-flicker {
+    0% { opacity: 0.8; text-shadow: 2px 0 0 red, -2px 0 0 blue; }
+    100% { opacity: 1; text-shadow: -2px 0 0 red, 2px 0 0 blue; }
+}

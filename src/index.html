@@ -4,86 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>the depths of my nervous system</title>
-    <style>
-        body {
-            background-color: #050505;
-            color: #d1d1d1;
-            font-family: "Courier New", Courier, monospace;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-weight: lighter;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            color: #fff;
-            /* Multi-layered shadow for a realistic neon glow */
-            text-shadow: 
-                0 0 5px rgba(255, 255, 255, 0.1),
-                0 0 10px rgba(255, 255, 255, 0.1),
-                0 0 20px rgba(255, 255, 255, 0.1);
-            animation: flicker 2s infinite;
-        }
-
-        @keyframes flicker {
-            0%, 18%, 22%, 25%, 53%, 57%, 100% {
-                opacity: 1;
-                /* Intense glow during "on" state */
-                text-shadow: 
-                    0 0 7px #fff,
-                    0 0 10px #fff,
-                    0 0 21px #fff,
-                    0 0 42px rgba(255, 255, 255, 0.5);
-            }
-            20%, 24%, 55% {
-                opacity: 0.3;
-                text-shadow: none;
-            }
-        }
-
-        /* This triggers when you move your mouse over the text */
-        a {
-            color: #666; /* Subtle links */
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.8rem;
-            transition: color 0.5s;
-        }
-
-        a:hover {
-            color: #888; /* Highlights when you hover */
-            text-decoration: underline;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-                /* Subtle scanline effect across the screen */
-        .scanline {
-            width: 100%;
-            height: 100px;
-            z-index: 10;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.161803399) 16.1803399%, rgba(0, 0, 0, 0) 100%);
-            opacity: 0.1;
-            position: absolute;
-            bottom: 100%;
-            animation: scanline 6s linear infinite;
-        }
-
-        @keyframes scanline {
-            0% { bottom: 100%; }
-            100% { bottom: -100%; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -93,8 +14,8 @@
     
     <p>
         <a href="https://github.com/LJBoxx" target="_blank">github</a>
-        <a href="https://www.root-me.org/ljbox" target="_blank">root-me</a>
         <a href="https://instagram.com/ljbox.exe" target="_blank">insta</a>
+        <a href="https://www.root-me.org/ljbox" target="_blank">about</a>
         <a href="mailto:contact@ljbox.fr">contact</a>
     </p>
 
