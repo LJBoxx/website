@@ -106,31 +106,14 @@ header h1 {
   margin: 0;
 }
 
-/*
-.strip {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.strip img {
-  flex: 0 0 100%;
-  width: 100%;
-  height: auto;
-  scroll-snap-align: start;
-  animation: slide 10s linear infinite;
-}
-
-*/
-
 .reel {
-  overflow: hidden;          /* the window: hides what's outside */
+  overflow: hidden;
 }
 
 .strip{
   display: flex;
   animation: slideshow 10s ease-in-out infinite;
+  animation-play-state: var(--state, running);
 }
 
 .strip img {
@@ -138,4 +121,8 @@ header h1 {
   height: auto;
   width: 100%;
   scroll-snap-align: start;
+}
+
+.strip:hover {
+  animation-play-state: paused;
 }
