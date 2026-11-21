@@ -5,4 +5,4 @@ For the artistic directive, I went with something still sober but also kind of m
 
 Visit [here](https://ljbox.fr)
 
-The website is hosted on my vps !
+The website is hosted on my vps ! For security reasons, nginx config wont be published but a pretty basic one should work if you want to fork this project.
