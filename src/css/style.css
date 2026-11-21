@@ -154,3 +154,7 @@ figcaption {
   margin-bottom: 1px;
   border-bottom: 1px solid var(--rule);
 }
+
+.cyber h3 {
+  padding-top: 10px;
+}
