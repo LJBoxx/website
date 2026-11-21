@@ -50,6 +50,11 @@ h1, h2 {
     border-bottom: 1px solid var(--rule);
 }
 
+h3 {
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+}
+
 a {
     color: var(--accent);
 }
@@ -73,6 +78,12 @@ dt {
     color: var(--muted);
     font-size: 0.85rem;
     padding-right: 1.5rem;
+}
+
+img {
+  flex: 0 0 100%;
+  height: auto;
+  width: 100%;
 }
 
 nav ul {
@@ -127,12 +138,19 @@ header h1 {
 }
 
 .strip img {
-  flex: 0 0 100%;
-  height: auto;
-  width: 100%;
   scroll-snap-align: start;
 }
 
 .strip:hover {
   animation-play-state: paused;
+}
+
+figcaption {
+  background-color: #151515;
+  color: white;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+  margin-bottom: 1px;
+  border-bottom: 1px solid var(--rule);
 }
